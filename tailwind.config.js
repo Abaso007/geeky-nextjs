@@ -1,4 +1,8 @@
-const theme = require("./config/theme.json");
+import theme from "./src/config/theme.json" with { type: "json" };
+import typography from "@tailwindcss/typography";
+import scrollbar from "tailwind-scrollbar";
+import forms from "@tailwindcss/forms";
+import bootstrapGrid from "tailwind-bootstrap-grid";
 
 let font_base = Number(theme.fonts.font_size.base.replace("px", ""));
 let font_scale = Number(theme.fonts.font_size.scale);
@@ -23,12 +27,12 @@ if (theme.fonts.font_family.secondary) {
 }
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: "class",
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./layouts/**/*.{js,ts,jsx,tsx}",
-    "./content/**/*.{md,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx}",
+    "./src/content/**/*.{md,mdx}",
   ],
   theme: {
     screens: {
@@ -82,10 +86,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("tailwind-scrollbar"),
-    require("@tailwindcss/forms"),
-    require("tailwind-bootstrap-grid")({ generateContainer: false }),
-  ],
+  plugins: [typography, scrollbar, forms, bootstrapGrid({ generateContainer: false })],
 };
