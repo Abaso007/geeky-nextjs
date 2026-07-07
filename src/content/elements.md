@@ -93,39 +93,39 @@ Some text to show that the reference links can follow later.
 
 #### HTML
 
-<Code language="html">
-{`<ul>
+```html
+<ul>
   <li class="nav-item">
     <a class="nav-link" href="/">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="about/">About</a>
   </li>
-</ul>`}
-</Code>
+</ul>
+```
 
 ---
 
 #### CSS
 
-<Code language="css">
-{`img {
+```css
+img {
   vertical-align: middle;
   border: 0;
   max-width: 100%;
   height: auto;
-}`}
-</Code>
+}
+```
 
 ---
 
 #### JavaScript
 
-<Code language="javascript">
-{`window.addEventListener("load", (e) => {
+```javascript
+window.addEventListener("load", (e) => {
   document.querySelector(".preloader").style.display = "none";
-})`}
-</Code>
+});
+```
 
 ---
 
@@ -195,7 +195,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 ### Table
 
 | #   |    First     |     Last     |       Handle |
-| :-- | :----------: | :----------: | -----------: |
+| :-- | :----------: | :----------: | :----------: |
 | 1   | Row:1 Cell:1 | Row:1 Cell:2 | Row:1 Cell:3 |
 | 2   | Row:2 Cell:1 | Row:2 Cell:2 | Row:2 Cell:3 |
 | 3   | Row:3 Cell:1 | Row:3 Cell:2 | Row:3 Cell:3 |

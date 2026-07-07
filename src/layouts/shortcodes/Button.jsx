@@ -8,9 +8,11 @@ const Button = ({ href, type, rel, children }) => {
       rel={`noopener noreferrer ${
         rel ? (rel === "follow" ? "" : rel) : "nofollow"
       }`}
-      className={`btn me-4 mb-4 ${
-        type === "outline" ? "btn-outline-primary" : "btn-primary"
-      } border-primary hover:text-white hover:no-underline`}
+      className={`btn me-4 mb-4 relative z-10 ${
+        type === "outline"
+          ? "btn-outline-primary"
+          : "btn-primary text-white"
+      } border-primary hover:no-underline`}
     >
       {children}
     </Link>

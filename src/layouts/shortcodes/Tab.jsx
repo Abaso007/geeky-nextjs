@@ -1,5 +1,7 @@
-function Tab({ children }) {
-  return <li className="tab-item my-0 hidden">{children}</li>;
+"use client";
+
+function Tab({ name, children }) {
+  return <>{children}</>;
 }
 
 export default Tab;

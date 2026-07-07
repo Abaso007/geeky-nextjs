@@ -32,13 +32,17 @@
   @apply prose-img:rounded;
   @apply prose-table:rounded;
   @apply prose-strong:text-text-dark prose-strong:dark:text-darkmode-text-light;
-  @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
+  @apply prose-a:text-primary prose-a:no-underline;
   @apply prose-li:text-text prose-li:dark:text-darkmode-text-light;
   @apply prose-table:overflow-hidden prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
   @apply prose-thead:border-border prose-thead:bg-light prose-th:py-4 prose-th:px-4 prose-th:text-text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-dark prose-th:dark:text-darkmode-text-light;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
   @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-text-light;
   @apply prose-li:marker:dark:text-darkmode-text-light;
+}
+
+.content a:hover {
+  @apply underline;
 }
 
 .content img + em {

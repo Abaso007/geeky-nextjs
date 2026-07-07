@@ -1,6 +1,13 @@
 import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import CodeBlock from "@shortcodes/CodeBlock";
+
+const components = {
+  ...shortcodes,
+  code: CodeBlock,
+  pre: ({ children }) => children,
+};
 
 const MDXContent = ({ content }) => {
   const mdxOptions = {
@@ -10,7 +17,7 @@ const MDXContent = ({ content }) => {
   return (
     <MDXRemote
       source={content}
-      components={shortcodes}
+      components={components}
       options={{ mdxOptions }}
     />
   );

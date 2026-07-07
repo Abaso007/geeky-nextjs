@@ -1,42 +1,22 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import React from "react";
 
 function Tabs({ children }) {
-  //select tabItems
-  const tabItemsRef = useRef(null);
-
-  //change tab item on click
-  const handleChangTab = (event, index) => {
-    const tabLinks = [...event.currentTarget.parentElement.children];
-    const items = [...tabItemsRef.current.children];
-    const activeItem = items.find((item) => !item.classList.contains("hidden"));
-    const activeTabLink = tabLinks.find((item) =>
-      item.classList.contains("active-tab")
-    );
-    if (activeItem === items[index]) return;
-    activeTabLink.classList.remove("active-tab");
-    event.currentTarget.classList.add("active-tab");
-    activeItem.classList.add("hidden");
-    items[index].classList.remove("hidden");
-  };
-
-  //show first tab-item
-  useEffect(() => {
-    let allItems = [...tabItemsRef.current.children];
-    allItems[0].classList.remove("hidden");
-  }, []);
+  const [active, setActive] = useState(0);
+  const tabItems = React.Children.toArray(children);
 
   return (
     <div className="relative">
       <ul className="mb-0 flex list-none items-center space-x-4 pl-0">
-        {children.map((item, index) => (
+        {tabItems.map((item, index) => (
           <li
             key={index}
-            className={` m-0 cursor-pointer rounded px-8 py-3 font-bold  text-text-dark dark:text-darkmode-text-light ${
-              index === 0 && "active-tab"
+            className={`m-0 cursor-pointer rounded px-8 py-3 font-bold text-text-dark dark:text-darkmode-text-light ${
+              index === active ? "active-tab" : ""
             }`}
-            onClick={(e) => handleChangTab(e, index)}
+            onClick={() => setActive(index)}
           >
             {item.props.name}
           </li>
@@ -44,9 +24,15 @@ function Tabs({ children }) {
       </ul>
       <ul
         className="mt-1 mb-0 list-none rounded bg-light p-6 dark:bg-darkmode-dark"
-        ref={tabItemsRef}
       >
-        {children}
+        {tabItems.map((item, index) => (
+          <li
+            key={index}
+            className={`tab-item my-0 ${index === active ? "" : "hidden"}`}
+          >
+            {item.props.children}
+          </li>
+        ))}
       </ul>
     </div>
   );
