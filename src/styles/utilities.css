@@ -1,0 +1,11 @@
+@utility container {
+  @apply mx-auto max-w-[1320px] px-4 sm:px-8;
+}
+
+@theme {
+  --breakpoint-sm: 540px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
