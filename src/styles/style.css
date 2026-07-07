@@ -4,7 +4,12 @@
 @plugin 'tailwind-bootstrap-grid' {
   generate_container: false;
 }
-@plugin 'tailwind-scrollbar';
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}
+
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @import "./base.css" layer(base);
 @import "./buttons.css" layer(components);
