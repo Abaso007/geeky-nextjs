@@ -114,7 +114,7 @@ const Contact = ({ data }) => {
              rounded border border-border p-4 text-primary dark:border-darkmode-border"
               >
                 <FaUserAlt />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
+                <p className="ml-1.5 text-lg font-bold text-text-dark dark:text-darkmode-text-light">
                   {phone}
                 </p>
               </Link>
@@ -128,7 +128,7 @@ const Contact = ({ data }) => {
              rounded border border-border p-4 text-primary dark:border-darkmode-border"
               >
                 <FaEnvelope />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
+                <p className="ml-1.5 text-lg font-bold text-text-dark dark:text-darkmode-text-light">
                   {mail}
                 </p>
               </Link>
@@ -141,7 +141,7 @@ const Contact = ({ data }) => {
              rounded border border-border p-4 text-primary dark:border-darkmode-border"
               >
                 <FaMapMarkerAlt />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
+                <p className="ml-1.5 text-lg font-bold text-text-dark dark:text-darkmode-text-light">
                   {location}
                 </p>
               </span>

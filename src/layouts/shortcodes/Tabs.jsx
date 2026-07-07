@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -33,7 +33,7 @@ function Tabs({ children }) {
         {children.map((item, index) => (
           <li
             key={index}
-            className={` m-0 cursor-pointer rounded px-8 py-3 font-bold  text-dark dark:text-darkmode-light ${
+            className={` m-0 cursor-pointer rounded px-8 py-3 font-bold  text-text-dark dark:text-darkmode-text-light ${
               index === 0 && "active-tab"
             }`}
             onClick={(e) => handleChangTab(e, index)}
@@ -43,7 +43,7 @@ function Tabs({ children }) {
         ))}
       </ul>
       <ul
-        className="mt-1 mb-0 list-none rounded bg-theme-light p-6 dark:bg-darkmode-theme-dark"
+        className="mt-1 mb-0 list-none rounded bg-light p-6 dark:bg-darkmode-dark"
         ref={tabItemsRef}
       >
         {children}

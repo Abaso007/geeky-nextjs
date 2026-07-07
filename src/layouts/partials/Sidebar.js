@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import config from "@config/config.json";
 import social from "@config/social.json";
@@ -52,7 +52,7 @@ const Sidebar = ({ posts, categories, className }) => {
           <ul>
             {categories.map((category, i) => (
               <li
-                className={`relative mb-2 flex items-center justify-between pl-6 text-[16px] font-bold capitalize text-dark dark:text-darkmode-light ${
+                className={`relative mb-2 flex items-center justify-between pl-6 text-[16px] font-bold capitalize text-text-dark dark:text-darkmode-text-light ${
                   i !== categories.length - 1 &&
                   "border-b border-border  dark:border-darkmode-border"
                 }`}

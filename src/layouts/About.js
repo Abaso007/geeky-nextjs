@@ -49,7 +49,7 @@ const About = ({ data }) => {
               <ul className="row">
                 {experience?.list?.map((item, index) => (
                   <li
-                    className="mb-5 text-lg font-bold text-dark dark:text-darkmode-light lg:col-6"
+                    className="mb-5 text-lg font-bold text-text-dark dark:text-darkmode-text-light lg:col-6"
                     key={"experience-" + index}
                   >
                     {item}

@@ -28,7 +28,7 @@ const Categories = async () => {
         {markdownify(
           "Categories",
           "h1",
-          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
+          "h2 mb-16 bg-light dark:bg-darkmode-dark py-12 text-center lg:text-[55px]"
         )}
         <div className="container pt-12 text-center">
           <ul className="row">
@@ -39,7 +39,7 @@ const Categories = async () => {
               >
                 <Link
                   href={`/categories/${category.name}`}
-                  className="flex w-full items-center justify-center rounded-lg bg-theme-light px-4 py-4 font-bold text-dark transition hover:bg-primary hover:text-white  dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  className="flex w-full items-center justify-center rounded-lg bg-light px-4 py-4 font-bold text-text-dark transition hover:bg-primary hover:text-white  dark:bg-darkmode-dark dark:text-darkmode-text-light dark:hover:bg-primary dark:hover:text-white"
                 >
                   <FaFolder className="mr-1.5" />
                   {humanize(category.name)} ({category.posts})

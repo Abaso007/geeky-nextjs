@@ -20,25 +20,25 @@
 
 .content {
   @apply prose max-w-none;
-  @apply prose-headings:mt-[.5em] prose-headings:mb-[.9em] prose-headings:font-bold prose-headings:text-dark prose-headings:dark:text-white;
+  @apply prose-headings:mt-[.5em] prose-headings:mb-[.9em] prose-headings:font-bold prose-headings:text-text-dark prose-headings:dark:text-white;
   @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
   @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
-  @apply prose-p:text-base prose-p:text-text prose-p:dark:text-darkmode-light;
-  @apply prose-blockquote:mb-12 prose-blockquote:rounded prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:not-italic prose-blockquote:dark:bg-theme-dark prose-blockquote:lg:px-16;
+  @apply prose-p:text-base prose-p:text-text prose-p:dark:text-darkmode-text-light;
+  @apply prose-blockquote:mb-12 prose-blockquote:rounded prose-blockquote:border-0 prose-blockquote:bg-light prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:not-italic prose-blockquote:dark:bg-dark prose-blockquote:lg:px-16;
   @apply prose-code:px-1 prose-code:text-primary;
   @apply prose-pre:rounded;
   @apply prose-img:rounded;
   @apply prose-table:rounded;
-  @apply prose-strong:text-dark prose-strong:dark:text-darkmode-light;
+  @apply prose-strong:text-text-dark prose-strong:dark:text-darkmode-text-light;
   @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
-  @apply prose-li:text-text prose-li:dark:text-darkmode-light;
+  @apply prose-li:text-text prose-li:dark:text-darkmode-text-light;
   @apply prose-table:overflow-hidden prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
-  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-darkmode-light;
+  @apply prose-thead:border-border prose-thead:bg-light prose-th:py-4 prose-th:px-4 prose-th:text-text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-dark prose-th:dark:text-darkmode-text-light;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
-  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-light;
-  @apply prose-li:marker:dark:text-darkmode-light;
+  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-text-light;
+  @apply prose-li:marker:dark:text-darkmode-text-light;
 }
 
 .content img + em {
@@ -71,7 +71,7 @@
 }
 
 .banner-title span {
-  @apply font-normal font-bold text-dark dark:text-darkmode-light lg:text-[55px];
+  @apply font-normal font-bold text-text-dark dark:text-darkmode-text-light lg:text-[55px];
 }
 
 .section-title {
@@ -87,7 +87,7 @@
 }
 
 .socials a {
-  @apply inline-block px-2 py-1 text-lg text-dark hover:text-primary dark:text-darkmode-light dark:hover:text-primary;
+  @apply inline-block px-2 py-1 text-lg text-text-dark hover:text-primary dark:text-darkmode-text-light dark:hover:text-primary;
 }
 
 .newsletter-input:focus + svg {
@@ -112,11 +112,11 @@ footer .socials {
 }
 
 .notice .notice-body {
-  @apply text-[#666666] dark:text-darkmode-light;
+  @apply text-[#666666] dark:text-darkmode-text-light;
 }
 
 .notice .notice-body p {
-  @apply my-0 text-[#666666] dark:text-darkmode-light;
+  @apply my-0 text-[#666666] dark:text-darkmode-text-light;
 }
 
 .notice.note .notice-head {
@@ -152,7 +152,7 @@ footer .socials {
 }
 
 .active-tab {
-  @apply bg-theme-light dark:bg-darkmode-theme-dark;
+  @apply bg-light dark:bg-darkmode-dark;
 }
 
 .post img {

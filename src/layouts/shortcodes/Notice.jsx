@@ -12,7 +12,7 @@ function Notice({ type, children }) {
           {type}
         </p>
       </div>
-      <div className="notice-body my-0 p-3 pt-[40px] dark:text-darkmode-light">
+      <div className="notice-body my-0 p-3 pt-[40px] dark:text-darkmode-text-light">
         {children}
       </div>
     </div>

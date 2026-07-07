@@ -10,6 +10,7 @@
     "logo_text": "Geeky"
   },
   "settings": {
+    "searchable_folders": ["posts"],
     "theme_switcher": true,
     "default_theme": "system",
     "pagination": 6,

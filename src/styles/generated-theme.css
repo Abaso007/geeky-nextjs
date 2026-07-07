@@ -9,21 +9,21 @@
   --color-primary: #2ba283;
   --color-body: #fff;
   --color-border: #e1e1e1;
-  --color-theme-light: #f2f2f2;
-  --color-theme-dark: #1a202c;
-  --color-default: #555;
-  --color-dark: #222;
-  --color-light: #999;
+  --color-light: #f2f2f2;
+  --color-dark: #1a202c;
+  --color-text: #555;
+  --color-text-dark: #222;
+  --color-text-light: #999;
 
   /* === Darkmode Colors === */
   --color-darkmode-primary: #059669;
   --color-darkmode-body: #111;
   --color-darkmode-border: #636363;
-  --color-darkmode-theme-light: #f4f7f7;
-  --color-darkmode-theme-dark: #383848;
-  --color-darkmode-default: #a4a4a4;
-  --color-darkmode-dark: #ddd;
-  --color-darkmode-light: #fff;
+  --color-darkmode-light: #f4f7f7;
+  --color-darkmode-dark: #383848;
+  --color-darkmode-text: #a4a4a4;
+  --color-darkmode-text-dark: #ddd;
+  --color-darkmode-text-light: #fff;
 
   /* === Font Families === */
   --font-primary: Raleway, sans-serif;

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ const Accordion = ({ title, children, className }) => {
       className={`rounded border border-border dark:border-darkmode-border ${className}`}
     >
       <button
-        className="relative block w-full bg-theme-light px-4 py-3 text-left text-dark dark:bg-darkmode-theme-dark dark:text-darkmode-light"
+        className="relative block w-full bg-light px-4 py-3 text-left text-text-dark dark:bg-darkmode-dark dark:text-darkmode-text-light"
         onClick={() => setShow(!show)}
       >
         {title}

@@ -15,7 +15,7 @@ body.menu-open {
 }
 
 .navbar-brand {
-  @apply text-xl font-semibold text-dark;
+  @apply text-xl font-semibold text-text-dark;
 }
 
 .navbar-brand image {
@@ -35,7 +35,7 @@ body.menu-open {
 }
 
 .nav-link {
-  @apply rounded-[30px] px-6 py-2.5 text-left font-secondary text-[13.5px] capitalize text-dark transition hover:bg-primary hover:text-white dark:text-darkmode-light md:px-3 md:py-3 lg:text-center xl:px-5;
+  @apply rounded-[30px] px-6 py-2.5 text-left font-secondary text-[13.5px] capitalize text-text-dark transition hover:bg-primary hover:text-white dark:text-darkmode-text-light md:px-3 md:py-3 lg:text-center xl:px-5;
 }
 
 .nav-link.active {
@@ -55,7 +55,7 @@ body.menu-open {
 }
 
 .nav-dropdown-link {
-  @apply min-w-[150px] rounded py-2.5 px-3.5 text-base font-semibold text-dark transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-light;
+  @apply min-w-37.5 rounded py-2.5 px-3.5 text-base font-semibold text-text-dark transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-text-light;
 }
 
 .nav-dropdown-link.active {
