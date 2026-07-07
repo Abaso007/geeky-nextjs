@@ -2,7 +2,6 @@ import config from "@config/config.json";
 import PostSingle from "@layouts/PostSingle";
 import { getSinglePage } from "@lib/contentParser";
 import { getTaxonomy } from "@lib/taxonomyParser";
-import parseMDX from "@lib/utils/mdxParser";
 
 const { blog_folder } = config.settings;
 
@@ -17,7 +16,6 @@ const Article = async ({ params }) => {
   const { single } = await params;
   const posts = getSinglePage(`src/content/${blog_folder}`);
   const post = posts.find((p) => p.slug == single);
-  const mdxContent = await parseMDX(post.content);
 
   const relatedPosts = posts.filter((p) =>
     post.frontmatter.categories.some((cate) =>
@@ -42,7 +40,6 @@ const Article = async ({ params }) => {
     <PostSingle
       frontmatter={frontmatter}
       content={content}
-      mdxContent={mdxContent}
       slug={single}
       allCategories={categoriesWithPostsCount}
       relatedPosts={relatedPosts}

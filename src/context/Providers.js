@@ -1,8 +1,8 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
-import { JsonContext } from "src/context/state";
+import { JsonContext } from "@/context/state";
 import config from "@config/config.json";
+import { ThemeProvider } from "next-themes";
 
 const { default_theme } = config.settings;
 

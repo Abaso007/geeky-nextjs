@@ -4,9 +4,10 @@ import SeoMeta from "@layouts/partials/SeoMeta";
 import { slugify } from "@lib/utils/textConverter";
 import Post from "@partials/Post";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { useSearchContext } from "src/context/state";
 
-const SearchPage = () => {
+const SearchContent = () => {
   const searchParams = useSearchParams();
   const keyword = slugify(searchParams.get("key") || "");
   const { posts } = useSearchContext();
@@ -56,6 +57,14 @@ const SearchPage = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const SearchPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 };
 

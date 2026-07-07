@@ -1,10 +1,10 @@
-import Header from "@layouts/partials/Header";
-import Footer from "@layouts/partials/Footer";
+import Providers from "@/context/Providers";
+import "@/styles/style.scss";
 import config from "@config/config.json";
 import theme from "@config/theme.json";
 import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
-import Providers from "./Providers";
-import "@/styles/style.scss";
+import Footer from "@layouts/partials/Footer";
+import Header from "@layouts/partials/Header";
 
 const { site } = config;
 const { font_family } = theme.fonts;

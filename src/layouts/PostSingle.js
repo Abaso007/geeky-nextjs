@@ -2,24 +2,22 @@
 
 import config from "@config/config.json";
 import InnerPagination from "@layouts/components/InnerPagination";
+import MDXContent from "@layouts/partials/MDXContent";
 import dateFormat from "@lib/utils/dateFormat";
 import { markdownify } from "@lib/utils/textConverter";
 import { DiscussionEmbed } from "disqus-react";
-import { MDXRemote } from "next-mdx-remote";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 import Post from "./partials/Post";
 import Sidebar from "./partials/Sidebar";
-import shortcodes from "./shortcodes/all";
 const { disqus } = config;
 const { meta_author } = config.metadata;
 
 const PostSingle = ({
   frontmatter,
   content,
-  mdxContent,
   slug,
   posts,
   allCategories,
@@ -30,7 +28,6 @@ const PostSingle = ({
 
   const { theme } = useTheme();
   const author = frontmatter.author ? frontmatter.author : meta_author;
-  // Local copy so we don't modify global config.
   let disqusConfig = config.disqus.settings;
   disqusConfig.identifier = frontmatter.disqusId
     ? frontmatter.disqusId
@@ -91,7 +88,7 @@ const PostSingle = ({
                   </li>
                 </ul>
                 <div className="content mb-16">
-                  <MDXRemote {...mdxContent} components={shortcodes} />
+                  <MDXContent content={content} />
                 </div>
                 {config.settings.InnerPaginationOptions.enableBottom && (
                   <InnerPagination posts={posts} date={date} />
