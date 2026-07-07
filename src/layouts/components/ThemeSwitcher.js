@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import config from "@config/config.json";
 import { useTheme } from "next-themes";
@@ -16,7 +16,7 @@ const ThemeSwitcher = () => {
         <button
           aria-label="Toggle Theme"
           type="button"
-          className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
+          className="h-8 w-8 rounded p-1 justify-self-end"
           onClick={() =>
             setTheme(
               theme === "dark" || resolvedTheme === "dark" ? "light" : "dark"

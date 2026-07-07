@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Logo from "@components/Logo";
 import menu from "@config/menu.json";
@@ -37,7 +37,7 @@ const Header = () => {
         <div className="order-0">
           <Logo />
         </div>
-        <div className="flex items-center space-x-4 xl:space-x-8">
+        <div className="flex items-center gap-x-4 xl:gap-x-8">
           <div
             className={`collapse-menu ${
               !showMenu && "translate-x-full"
@@ -57,7 +57,7 @@ const Header = () => {
             </button>
             <ul
               id="nav-menu"
-              className="navbar-nav w-full md:w-auto md:space-x-1 lg:flex xl:space-x-2"
+              className="navbar-nav w-full md:w-auto md:space-x-1 lg:flex xl:gap-x-2 xl:space-x-0"
             >
               {main.map((menu, i) => (
                 <React.Fragment key={`menu-${i}`}>
@@ -65,9 +65,8 @@ const Header = () => {
                     <li className="nav-item nav-dropdown group relative">
                       <span
                         className={`nav-link ${
-                          menu.children
-                            .map((c) => c.url)
-                            .includes(pathname) && "active"
+                          menu.children.map((c) => c.url).includes(pathname) &&
+                          "active"
                         } inline-flex items-center`}
                       >
                         {menu.name}
@@ -78,7 +77,7 @@ const Header = () => {
                           <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                         </svg>
                       </span>
-                      <ul className="nav-dropdown-list hidden transition-all duration-300 group-hover:top-[46px] group-hover:block md:invisible md:absolute md:top-[60px] md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
+                      <ul className="nav-dropdown-list hidden transition-all duration-300 group-hover:top-11.5 group-hover:block md:invisible md:absolute md:top-15 md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
                         {menu.children.map((child, i) => (
                           <li
                             className="nav-dropdown-item"
@@ -112,7 +111,10 @@ const Header = () => {
               ))}
             </ul>
             {/* header social */}
-            <Social source={socical} className="socials" />
+            <Social
+              source={socical}
+              className="socials hidden xl:flex items-center"
+            />
           </div>
           <ThemeSwitcher />
           {/* Header search */}
@@ -151,7 +153,7 @@ const Header = () => {
         />
       </nav>
       {showMenu && (
-        <div className="header-backdrop absolute top-0 left-0 h-[100vh] w-full bg-black/50 lg:hidden"></div>
+        <div className="header-backdrop absolute top-0 left-0 h-screen w-full bg-black/50 lg:hidden"></div>
       )}
     </header>
   );

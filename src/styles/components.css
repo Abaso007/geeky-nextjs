@@ -79,7 +79,7 @@
 }
 
 .socials {
-  @apply mx-3 flex items-center justify-center space-x-3 px-4 lg:justify-start lg:border-x 2xl:space-x-4;
+  @apply mx-3 flex items-center justify-center gap-x-3 px-4 lg:justify-start lg:border-x 2xl:gap-x-4;
 }
 
 .socials li {
