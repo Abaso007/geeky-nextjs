@@ -1,0 +1,8 @@
+.form-inputs * {
+  @apply mb-5 leading-10;
+}
+
+.form-input,
+.form-textarea {
+  @apply border-0 border-b border-border bg-transparent px-0 placeholder:text-xs placeholder:text-text-light focus:border-primary focus:ring-transparent dark:border-darkmode-border dark:text-darkmode-text-light dark:placeholder:text-darkmode-text-light;
+}

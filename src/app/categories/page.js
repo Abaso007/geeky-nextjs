@@ -1,0 +1,56 @@
+import config from "@config/config.json";
+import SeoMeta from "@layouts/partials/SeoMeta";
+import { getSinglePage } from "@lib/contentParser";
+import { getTaxonomy } from "@lib/taxonomyParser";
+import { humanize, markdownify, slugify } from "@lib/utils/textConverter";
+import Link from "next/link";
+import { FaFolder } from "react-icons/fa";
+
+const { blog_folder } = config.settings;
+
+const Categories = async () => {
+  const posts = getSinglePage(`src/content/${blog_folder}`);
+  const categories = getTaxonomy(`src/content/${blog_folder}`, "categories");
+  const categoriesWithPostsCount = categories.map((category) => {
+    const filteredPosts = posts.filter((post) =>
+      post.frontmatter.categories.map((e) => slugify(e)).includes(category)
+    );
+    return {
+      name: category,
+      posts: filteredPosts.length,
+    };
+  });
+
+  return (
+    <>
+      <SeoMeta pathname="/categories" title="Categories" />
+      <section className="section pt-0">
+        {markdownify(
+          "Categories",
+          "h1",
+          "h2 mb-16 bg-light dark:bg-darkmode-dark py-12 text-center lg:text-[55px]"
+        )}
+        <div className="container pt-12 text-center">
+          <ul className="row">
+            {categoriesWithPostsCount.map((category, i) => (
+              <li
+                key={`category-${i}`}
+                className="mt-4 block lg:col-4 xl:col-3"
+              >
+                <Link
+                  href={`/categories/${category.name}`}
+                  className="flex w-full items-center justify-center rounded-lg bg-light px-4 py-4 font-bold text-text-dark transition hover:bg-primary hover:text-white  dark:bg-darkmode-dark dark:text-darkmode-text-light dark:hover:bg-primary dark:hover:text-white"
+                >
+                  <FaFolder className="mr-1.5" />
+                  {humanize(category.name)} ({category.posts})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Categories;
